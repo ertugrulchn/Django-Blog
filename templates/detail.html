@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!----------------------------- Main Site Section ------------------------------>
+
+<main>
+  <section class="container">
+    <div class="site-content">
+      <div class="posts">
+        <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+          <div class="post-image">
+            <div>
+              <img src="{{post.image.url}}" class="img" alt="blog1" />
+            </div>
+            <div class="post-info flex-row">
+              <span
+                ><i class="fas fa-user text-gray"></i
+                >&nbsp;&nbsp;{{post.user}}</span
+              >
+              <span
+                ><i class="fas fa-calendar-alt text-gray"></i
+                >&nbsp;&nbsp;{{post.publishing_date}}</span
+              >
+              <span>2 Commets</span>
+            </div>
+          </div>
+          <div class="post-title">
+            <a href="#">{{post.title}}</a>
+            <p>{{post.content}}</p>
+          </div>
+        </div>
+    </div>
+    
+        <aside class="sidebar">
+            <div class="category">
+              <h2>Category</h2>
+              <ul class="category-list">
+                <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                  <a href="#">Software</a>
+                  <span>(05)</span>
+                </li>
+              </ul>
+            </div>
+            <div class="category">
+              <h2>Search</h2>
+              <ul class="category-list">
+                  <form action="" method="GET" role="search" >
+                  <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                      <input type="text" style="border: none; outline: none; background: transparent; width:max-content" name="q" placeholder="Search" value="">
+                      <input type="submit" style="border: none; background: transparent; cursor: pointer; width:max-content" value="Ara" />
+                  </li>
+                   </form>
+              </ul>
+            </div>
+        </aside>
+  </section>
+
+  <!-- -----------x---------- Site Content -------------x------------>
+</main>
+
+{% endblock %}
